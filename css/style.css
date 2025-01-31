@@ -1,0 +1,119 @@
+/*#region global*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/MontserratAlternates-Light.otf');
+}
+
+/*reset*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    list-style: none;
+    color: var(--clr-white)
+}
+
+/*paleta de cores*/
+:root {
+    --clr-base: #333333;
+    --clr-black: #000000;
+    --clr-white: #ffffff;
+    --clr-accent: #fff000;
+    --clr-card: rgba(255, 255, 255, .2);
+    --no-color: transparent;
+    --clr-gradient1: linear-gradient(45deg, #000839 10%, #8400ff 90%);
+    --clr-gradient2: linear-gradient(45deg, #8400ff 10%, #000839 90%);
+}
+
+/*regras*/
+body {
+    background: var(--clr-base);
+}
+
+h1>span {
+    color: var(--clr-accent);
+}
+
+a {
+    text-decoration: none;
+    transition: all .3;
+}
+
+
+
+/*#endregion*/
+
+/*#region topo*/
+.topo {
+    width: 100%;
+    height: 600px;
+    background-image: url('../img/bgTopo.png');
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+
+    & .logo {
+        height: 150px;
+        opacity: .5;
+        transition: .3s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+    }
+
+    & .cardTopo {
+        background: var(--clr-card);
+        width: 300px;
+        border: 2px solid var(--no-color);
+        text-align: center;
+        padding: 20px 0;
+
+        &:hover {
+            border: 2px solid var(--clr-white);
+        }
+    }
+
+    & img {
+        width: 100%;
+    }
+
+    & .imgLateral {
+        height: 700px;
+    }
+
+    & .logoWhats {
+        position: fixed;
+        width: 50px;
+        right: 30px;
+        opacity: .5;
+        transition: .3s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+}
+
+/*#endregion*/
+
+/*#region servicos*/
+
+
+/*#endregion*/
+
+/*#region contato*/
+
+
+/*#endregion*/
+
+/*#region footer*/
+
+
+/*#endregion*/

@@ -60,9 +60,13 @@ a {
         height: 150px;
         opacity: .5;
         transition: .3s;
+        cursor: pointer;
 
         &:hover {
             opacity: 1;
+            filter: drop-shadow(0 0 8px var(--clr-accent));
+            transform: scale(1.4) rotate(720deg);
+
         }
 
     }
@@ -85,6 +89,12 @@ a {
 
     & .imgLateral {
         height: 700px;
+        transition: .3s;
+        filter: saturate(0);
+
+        &:hover {
+            filter: saturate(1) drop-shadow(0 0 100px var(--clr-accent));
+        }
     }
 
     & .logoWhats {
@@ -104,7 +114,85 @@ a {
 /*#endregion*/
 
 /*#region servicos*/
+.servicos {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
+    & .card {
+        flex-basis: 250px;
+        height: 350px;
+        background: var(--clr-white);
+        transition: .3s;
+        border-radius: 10px;
+
+        & li {
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+
+            &:first-child {
+                background: var(--clr-black);
+                padding: 10px;
+            }
+
+            & p {
+                color: var(--clr-black);
+                padding: 30px;
+                line-height: 30px;
+            }
+        }
+
+        &:hover {
+            border-bottom: 3px solid var(--clr-accent);
+            transform: scale(1.2);
+            background: var(--clr-black);
+
+            & li {
+                &:first-child {
+                    background: var(--clr-white);
+
+                    & h2 {
+                        color: var(--clr-black);
+                    }
+                }
+
+                & p {
+                    color: var(--clr-white);
+                }
+            }
+        }
+    }
+
+    .accent {
+        background: var(--clr-gradient1);
+
+        & li {
+            &:first-child {
+                background: var(--no-color);
+            }
+
+            & p {
+                color: var(--clr-white);
+            }
+        }
+
+        &:hover {
+            background: var(--clr-gradient2);
+
+            & li {
+                &:first-child {
+                    background: var(--no-color);
+                }
+
+                & h2 {
+                    color: var(--clr-white);
+                }
+            }
+        }
+    }
+}
 
 /*#endregion*/
 

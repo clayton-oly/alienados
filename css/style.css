@@ -1,3 +1,20 @@
+/*#region scroll-bar*/
+body::-webkit-scrollbar {
+    width: 20px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--clr-base);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--clr-black);
+    border-radius: 20px;
+    border: 5px solid var(--clr-base);
+}
+
+/*#endregion*/
+
 /*#region global*/
 @font-face {
     font-family: 'Montserrat';
@@ -94,6 +111,7 @@ a {
 
         &:hover {
             filter: saturate(1) drop-shadow(0 0 100px var(--clr-accent));
+            cursor: pointer;
         }
     }
 
@@ -197,11 +215,89 @@ a {
 /*#endregion*/
 
 /*#region contato*/
+.contato {
+    width: 100%;
+    height: 700px;
+    background: url('../img/bgcontato.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 50px;
 
+    & .contatoContainer {
+        width: 20%;
+        margin: 40px auto;
+
+        & li {
+            padding: 10px 0;
+
+            & input[type=text],
+            [type=email] {
+                width: 100%;
+                padding: 5px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                color: var(--clr-black);
+                opacity: .6;
+
+                &:focus {
+                    opacity: 1;
+                }
+            }
+
+            & input[type=button],
+            [type=reset] {
+                width: 160px;
+                height: 80px;
+                border: 1px solid var(--no-color);
+                border-radius: 5px;
+                color: var(--clr-black);
+                background: var(--clr-white);
+                font-weight: 900;
+                cursor: pointer;
+                opacity: .6;
+                transition: .3s;
+
+                &:hover {
+                    border: 1px solid var(--clr-white);
+                    color: var(--clr-white);
+                    background: var(--no-color);
+                }
+            }
+
+            & p {
+                & a {
+                    color: var(--clr-accent);
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        & .btnDefault {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
 
 /*#endregion*/
 
 /*#region footer*/
+.footerContainer {
+    width: 100%;
+    height: 200px;
+    background: var(--clr-black);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
+    & li {
+        & img {
+            width: 250px;
+        }
+    }
+}
 
 /*#endregion*/
